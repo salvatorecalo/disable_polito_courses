@@ -1,0 +1,24 @@
+{
+    "name": "Hide polito course",
+    "description": "Hide polito course from online portal",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.polito.it/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
